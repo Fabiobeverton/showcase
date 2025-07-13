@@ -1,0 +1,135 @@
+Ezra Platform – Adversarial Intelligence & Compliance Ecosystem
+Ezra Platform é um ecossistema de produtos de IA adversarial, compliance automatizado e orquestração multiagente. Seu núcleo é o Ezra Natural Selector, um sistema de validação destrutiva de ideias, complementado por módulos especializados em due diligence, segurança regulatória, antifragilidade de pitchs e defesa de compliance.
+
+📦 Produtos da Plataforma Ezra
+EzraNaturalSelector
+Validação adversarial de ideias com agentes especializados (legal, tech, mercado, ético). Geração de relatórios auditáveis, score de robustez e logs explicáveis.
+
+EzraDueDiligenceB2X
+Análise adversarial automatizada de fornecedores, startups e concorrências públicas. Verificações de risco, ESG, fraude, e viabilidade com output pronto para conselhos.
+
+EzraAttackSimulator
+Simulador de ataques múltiplos a produtos digitais (apps, APIs, UX, segurança). Output com logs por vetor de ataque, sugestões e defesa simulada.
+
+EzraAIEthicsRedTeam
+Sandbox adversarial para stress-test de LLMs com foco em bias, fairness, e legal compliance. Outputs com SHAP, LIME e recomendações éticas por jurisdição.
+
+EzraPublicKillbox
+Arena de confrontos entre ideias, com agentes autônomos + jurados humanos globais. Logs públicos, ranking de sobrevivência, e exportação de due diligence.
+
+EzraRegulatoryKillbox
+Simulador de futurologia regulatória. Agentes preditivos de riscos regulatórios futuros (ex: AI Act, LGPD, ESG) aplicam ataques simulados às ideias ou produtos.
+
+EzraKillboxAPI
+Módulo plugável que permite submeter ideias de sistemas terceiros via API RESTful. Output: logs, score e relatório adversarial em tempo real.
+
+EzraPainIndex
+Scanner de dores reais de mercado. Detecta se o “pain” alegado por uma ideia tem evidência em fontes públicas/privadas. Gera ranking e relatório de relevância.
+
+EzraInvestorKillbox
+Simulador de pitch com ataques automatizados, para founders treinarem antes de investidores reais. Exporta logs, performance e score de preparo.
+
+EzraAuditChain
+Certificação blockchain dos logs e decisões adversariais, para uso em M&A, IPO, compliance setorial. Geração de trilha imutável.
+
+EzraDialecticCore
+Arquitetura de agentes: Agônico → Antagônico → Fusor → Inversor. Executa fusão adversarial e geração divergente de ideias por antiembedding controlado.
+
+🧠 Arquitetura Técnica
+Backend:
+
+FastAPI, Python, Pydantic, LangChain, RAG Pipelines, XAI (SHAP/LIME)
+
+Multiagent orchestration com logs e auditoria por submissão
+
+Estrutura de microserviços desacoplada com API-first design
+
+Frontend (se usado):
+
+Next.js, Tailwind, TypeScript, Shadcn/UI, Recharts, Lucide Icons
+
+Interface modular para dashboards, submissão, logs e simuladores
+
+LLM & IA:
+
+OpenAI, Anthropic, Mistral, LLM Chains, FAISS, Pinecone
+
+Red teaming de ideias, explainability pipelines, adversarial scoring engine
+
+Banco de Dados & Armazenamento:
+
+PostgreSQL, Prisma, Redis, MinIO (S3 compatível)
+
+Logging persistente e versionado, sem exclusão permitida
+
+🔐 Segurança e Compliance
+CI/CD Pipeline (GitHub Actions):
+
+Auditorias automáticas com Semgrep, SonarCloud, Snyk, TruffleHog
+
+Headers de conformidade com hash SHA-256 por arquivo
+
+Commit hash + fingerprint por build, rastreável no tempo
+
+Aprovado via workflow de 47 etapas auditáveis
+
+Segurança Operacional:
+
+JWT, OAuth2, RBAC, Keycloak
+
+Multi-tenant isolation
+
+Validação de payloads, sandboxing de inputs e agent isolation
+
+Logs criptografados e imutáveis
+
+Compliance Legal:
+
+Tags automáticas: SOC2, ISO 27001, GDPR, LGPD, AI Act (emulador)
+
+Relatórios auditáveis exportáveis
+
+Trilha de decisão por agente explicável e versionada
+
+📊 Pipeline CI/CD (47 Workflows Ativos)
+Todos os módulos seguem uma arquitetura CI/CD de segurança máxima com os seguintes workflows ativos:
+
+plaintext
+Copy
+Edit
+1. Static Code Analysis       17. API Key Guardrails        33. GDPR Tagging
+2. SonarCloud Scan            18. Role Trigger Filtering     34. Audit Timestamps
+3. Snyk Vulnerabilities       19. Manual Approval Gates      35. Hash on Merge
+4. Branch Protection Rules    20. Hash Validation for Deploy 36. Deployment Anchors
+5. Pre-commit Checks          21. Token Validation           37. Code Ownership Check
+6. Code Linting               22. Lockfile Check             38. Internal Module Isolation
+7. Format Consistency         23. Outdated Dep Scan          39. White-label Tracing
+8. Secrets Detection          24. CVE Scanner                40. Env File Protection
+9. Auto Tests (unit/integration) 25. Tenant Isolation Test   41. Drift Detection
+10. Coverage Enforcement      26. LLM Explainability Logs    42. Auto Rollbacks
+11. Quality Gate              27. Agent Log Capture          43. Ops Explain Hooks
+12. Compliance Header         28. GitHub Actions Permissions 44. LangChain Audit Logs
+13. Commit Hash Logging       29. Pipeline Fingerprint       45. RAG Verifier Step
+14. File Hashing SHA-256      30. Provenance Trace Logs      46. Audit Trail Engine
+15. CI/CD Build Logs          31. SOC2 Tagging               47. Failure Categorizer
+16. Metadata Compliance Tag   32. ISO 27001 Tagging
+📄 Documentação & Acesso
+Documentação Técnica: [/docs] – Incluirá schema OpenAPI, fluxos de agente e exemplos de payload.
+
+Readmes de Produto: vinculados a cada módulo no repositório.
+
+GitHub Actions: .github/workflows/*
+
+Compliance: /compliance/, /logs/, /audit/
+
+🚀 Roadmap (Q3/Q4 2025)
+🔁 Modo Self-hosted via Docker Compose e Kubernetes
+
+🌐 Multi-idiomas com fallback e embeddings locais
+
+📊 BI Dashboard para comparativos entre ideias
+
+🧪 Frameworks de benchmark para LLM red teaming
+
+🔐 Módulo EzraVault para guarda jurídica de logs
+
