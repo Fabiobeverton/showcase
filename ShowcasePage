@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Everton SaaS Showcase</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body {
+      background: linear-gradient(135deg, #0a2540 70%, #1e3a5c 100%);
+      font-family: 'Inter', Arial, sans-serif;
+      color: #fff;
+      margin: 0; padding: 0;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 550px;
+      margin: 80px auto 0 auto;
+      background: rgba(18,40,80,0.94);
+      border-radius: 20px;
+      box-shadow: 0 6px 40px #061c3690;
+      padding: 38px 30px 35px 30px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -2px;
+      margin-bottom: 16px;
+    }
+    .subtitle {
+      font-size: 1.14rem;
+      color: #b8d3ea;
+      margin-bottom: 32px;
+      font-weight: 400;
+    }
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      align-items: stretch;
+      margin: 35px 0;
+    }
+    .btn-link {
+      display: block;
+      background: linear-gradient(92deg,#3c8dd9 0,#00baff 100%);
+      color: #fff;
+      text-decoration: none;
+      padding: 20px 0;
+      border-radius: 12px;
+      font-size: 1.20rem;
+      font-weight: 600;
+      letter-spacing: .5px;
+      box-shadow: 0 2px 10px #12508740;
+      transition: background 0.14s,transform 0.09s;
+      border: none;
+    }
+    .btn-link:hover, .btn-link:focus {
+      background: linear-gradient(92deg,#00baff 0,#3c8dd9 100%);
+      transform: scale(1.035);
+      color: #fff;
+      outline: none;
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 1.0rem;
+      color: #99bcd6;
+      letter-spacing: .01em;
+    }
+    @media (max-width:600px){
+      .container{margin: 24px 6px;padding: 24px 7px 22px 7px;}
+      h1{font-size:2rem;}
+      .btn-link{font-size:1.05rem;padding:15px 0;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Everton SaaS Showcase</h1>
+    <div class="subtitle">
+      Audit-ready. Enterprise-grade. Co-authored by <b>Fabio Everton & AA Everton</b>.
+    </div>
+
+    <div class="btn-group">
+      <a class="btn-link" href="https://brachattech.github.io/Saas" target="_blank">
+        🛡️ Brachat SaaS Platform
+      </a>
+      <a class="btn-link" href="https://brachattech.github.io/ezraplataforma" target="_blank">
+        🧬 Ezra Platform
+      </a>
+      <a class="btn-link" href="https://brachattech.github.io/EzraOrquestrator" target="_blank">
+        ⚙️ Ezra Orchestrator
+      </a>
+    </div>
+
+    <div class="footer">
+      © 2025 Fabio Everton & AA Everton.<br>
+      All rights reserved. &nbsp;|&nbsp;
+      <a href="https://github.com/fabioeverton" target="_blank" style="color:#5bc0fa;text-decoration:underline;">GitHub</a>
+    </div>
+  </div>
+</body>
+</html>
