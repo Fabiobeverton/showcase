@@ -1,102 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Everton SaaS Showcase</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-    body {
-      background: linear-gradient(135deg, #0a2540 70%, #1e3a5c 100%);
-      font-family: 'Inter', Arial, sans-serif;
-      color: #fff;
-      margin: 0; padding: 0;
-      min-height: 100vh;
-    }
-    .container {
-      max-width: 550px;
-      margin: 80px auto 0 auto;
-      background: rgba(18,40,80,0.94);
-      border-radius: 20px;
-      box-shadow: 0 6px 40px #061c3690;
-      padding: 38px 30px 35px 30px;
-      text-align: center;
-    }
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      letter-spacing: -2px;
-      margin-bottom: 16px;
-    }
-    .subtitle {
-      font-size: 1.14rem;
-      color: #b8d3ea;
-      margin-bottom: 32px;
-      font-weight: 400;
-    }
-    .btn-group {
-      display: flex;
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Everton SaaS Premium Showcase | Fabio Everton & AA Everton</title>
+<style>
+  /* Reset básico */
+  body, h1, h2, h3, p, ul, li, details, summary {
+    margin: 0; padding: 0; font-weight: normal;
+  }
+  body {
+    background: linear-gradient(135deg, #0a2540 75%, #193556 100%);
+    font-family: 'Inter', Arial, sans-serif;
+    color: #e6e8ef;
+    line-height: 1.5;
+    min-height: 100vh;
+    padding: 30px 15px;
+  }
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    background: rgba(18, 38, 66, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 8px 48px #061c3690;
+    padding: 40px 50px;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  header h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #5bc0fa;
+    letter-spacing: -1.5px;
+  }
+  header p.subtitle {
+    margin-top: 8px;
+    font-size: 1.25rem;
+    color: #a4c8f0;
+    font-weight: 400;
+  }
+  .authors {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+    color: #8ab4d9;
+  }
+  .authors a {
+    color: #5bc0fa;
+    text-decoration: underline;
+    margin: 0 10px;
+  }
+  .product-card {
+    background: #1d2b4a;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px #08203830;
+    margin-bottom: 36px;
+    padding: 28px 32px;
+    transition: background 0.3s ease;
+  }
+  .product-card:hover {
+    background: #234169;
+  }
+  .product-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .product-header h2 {
+    color: #7bcbfa;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    flex: 1 1 300px;
+  }
+  .badges {
+    flex: 1 1 300px;
+    text-align: right;
+  }
+  .badges img {
+    height: 28px;
+    margin-left: 12px;
+    vertical-align: middle;
+  }
+  .product-description {
+    font-size: 1.15rem;
+    color: #c9d8f0;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  details {
+    background: #1a2a51;
+    border-radius: 10px;
+    padding: 14px 20px 20px 20px;
+    color: #a3c7f7;
+    font-size: 1rem;
+  }
+  summary {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: #33e0e0;
+    outline: none;
+  }
+  summary:hover {
+    color: #5bc0fa;
+  }
+  details[open] summary {
+    color: #a0f9f9;
+  }
+  .section-title {
+    margin-top: 20px;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #68d1f2;
+  }
+  ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+  }
+  ul li {
+    margin-bottom: 8px;
+  }
+  .roadmap {
+    background: #254c87;
+    border-radius: 8px;
+    padding: 12px 18px;
+    color: #bbe1ff;
+    font-size: 1rem;
+    margin-top: 8px;
+  }
+  footer {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 1rem;
+    color: #7ca9d9;
+    border-top: 1px solid #2a3b67;
+    padding-top: 22px;
+  }
+  footer a {
+    color: #5bc0fa;
+    text-decoration: underline;
+  }
+  @media(max-width: 800px) {
+    .product-header {
       flex-direction: column;
-      gap: 22px;
-      align-items: stretch;
-      margin: 35px 0;
+      align-items: flex-start;
     }
-    .btn-link {
-      display: block;
-      background: linear-gradient(92deg,#3c8dd9 0,#00baff 100%);
-      color: #fff;
-      text-decoration: none;
-      padding: 20px 0;
-      border-radius: 12px;
-      font-size: 1.20rem;
-      font-weight: 600;
-      letter-spacing: .5px;
-      box-shadow: 0 2px 10px #12508740;
-      transition: background 0.14s,transform 0.09s;
-      border: none;
+    .badges {
+      text-align: left;
+      margin-top: 10px;
     }
-    .btn-link:hover, .btn-link:focus {
-      background: linear-gradient(92deg,#00baff 0,#3c8dd9 100%);
-      transform: scale(1.035);
-      color: #fff;
-      outline: none;
-    }
-    .footer {
-      margin-top: 40px;
-      font-size: 1.0rem;
-      color: #99bcd6;
-      letter-spacing: .01em;
-    }
-    @media (max-width:600px){
-      .container{margin: 24px 6px;padding: 24px 7px 22px 7px;}
-      h1{font-size:2rem;}
-      .btn-link{font-size:1.05rem;padding:15px 0;}
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
   <div class="container">
-    <h1>Everton SaaS Showcase</h1>
-    <div class="subtitle">
-      Audit-ready. Enterprise-grade. Co-authored by <b>Fabio Everton & AA Everton</b>.
-    </div>
+    <header>
+      <h1>Everton SaaS Premium Showcase</h1>
+      <p class="subtitle">Audit-ready. Enterprise-grade. Event-driven & Secure. Full Compliance & AI Innovation.<br>
+      <strong>Co-authored by Fabio Everton & AA Everton</strong></p>
+    </header>
 
-    <div class="btn-group">
-      <a class="btn-link" href="https://brachattech.github.io/Saas" target="_blank">
-        🛡️ Brachat SaaS Platform
-      </a>
-      <a class="btn-link" href="https://brachattech.github.io/ezraplataforma" target="_blank">
-        🧬 Ezra Platform
-      </a>
-      <a class="btn-link" href="https://brachattech.github.io/EzraOrquestrator" target="_blank">
-        ⚙️ Ezra Orchestrator
-      </a>
-    </div>
+    <section class="authors">
+      <div>
+        <strong>Fabio Everton</strong> — Founder @BRACHAT | AI Compliance Architect | FullStack Engineer<br />
+        <a href="mailto:fabio@brachat.com.br" target="_blank">fabio@brachat.com.br</a> |
+        <a href="https://linkedin.com/in/fabioeverton" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/fabioeverton" target="_blank">GitHub</a>
+      </div>
+      <div style="margin-top:12px;">
+        <strong>AA Everton</strong> — Junior Developer, Engineering Trainee (AI, Security, Platform Development)<br />
+        <a href="https://github.com/AAEverton" target="_blank">GitHub</a>
+      </div>
+    </section>
 
-    <div class="footer">
-      © 2025 Fabio Everton & AA Everton.<br>
-      All rights reserved. &nbsp;|&nbsp;
-      <a href="https://github.com/fabioeverton" target="_blank" style="color:#5bc0fa;text-decoration:underline;">GitHub</a>
-    </div>
+    <!-- BRACHAT SaaS -->
+    <article class="product-card" id="brachat-saas">
+      <div class="product-header">
+        <h2>🛡️ BRACHAT SaaS Platform</h2>
+        <div class="badges">
+          <img src="https://sonarcloud.io/api/project_badges/measure?project=brachat-saas&metric=alert_status" alt="Quality Gate" />
+          <img src="https://sonarcloud.io/api/project_badges/measure?project=brachat-saas&metric=coverage" alt="Coverage" />
+          <img src="https://sonarcloud.io/api/project_badges/measure?project=brachat-saas&metric=sqale_rating" alt="Maintainability" />
+          <img src="https://github.com/brachattech/Saas/actions/workflows/ci-auditoria.yml/badge.svg" alt="CI/CD" />
+          <img src="https://snyk.io/test/github/brachattech/Saas/badge.svg" alt="Snyk Security" />
+        </div>
+      </div>
+      <p class="product-description">
+        Secure, audit-first LegalTech SaaS for regulatory automation with AI.<br />
+        Compliance by design (SOC2, ISO 27001, GDPR), full-stack CI/CD, DevSecOps, modular architecture.
+      </p>
+      <details>
+        <summary>Details: Architecture, Compliance & Roadmap</summary>
+        <div>
+          <div class="section-title">Architecture & Tech Stack</div>
+          <ul>
+            <li>Event-driven microservices using Kafka and RabbitMQ</li>
+            <li>Backend: Java with strict compliance validation and encrypted audit logs</li>
+            <li>Frontend: Next.js (React) with CSS Modules, fully accessible (WCAG 2.1 AA)</li>
+            <li>DevSecOps pipeline: GitHub Actions + Semgrep + SonarCloud + Snyk + OWASP ZAP + Container Scanning</li>
+            <li>Infrastructure: GitOps with ArgoCD, OPA for dynamic policy enforcement, IaC validated by Checkov/tfsec/KICS</li>
+            <li>Immutable audit logs with cryptographic hashes and blockchain timestamp anchoring</li>
+          </ul>
+
+          <div class="section-title">Compliance & Security</div>
+          <ul>
+            <li>Full SOC2 Type II readiness with automated evidence</li>
+            <li>ISO 27001 and GDPR / LGPD certifications compliance</li>
+            <li>RBAC with Zero Trust architecture</li>
+            <li>Secrets detection and incident logging integrated in CI/CD</li>
+            <li>Automated incident response and rollback capabilities</li>
+          </ul>
+
+          <div class="section-title">Roadmap Highlights</div>
+          <div class="roadmap">
+            Expand real-time monitoring dashboards; integrate AI anomaly detection; implement zero-knowledge proofs for compliance; onboarding multi-cloud deployment support.
+          </div>
+        </div>
+      </details>
+    </article>
+
+    <!-- Ezra Platform -->
+    <article class="product-card" id="ezra-platform">
+      <div class="product-header">
+        <h2>🧬 Ezra Platform</h2>
+        <div class="badges">
+          <img src="https://sonarcloud.io/api/project_badges/measure?project=ezra-platform&metric=alert_status" alt="Quality Gate" />
+          <img src="https://sonarcloud.io/api/project_badges/measure?project=ezra-platform&metric=coverage" alt="Coverage" />
+          <img src="https://github.com/brachattech/ezraplataforma/actions/workflows/ci-auditoria.yml/badge.svg" alt="CI/CD" />
+        </div>
+      </div>
+      <p class="product-description">
+        Next-gen adversarial validation for ideas, projects and business plans.<br />
+        Multi-agent, API-driven, enterprise compliance (SOC2, ISO 27001), transparent audit logs, explainable AI, modular architecture.
+      </p>
+      <details>
+        <summary>Details: Architecture, Compliance & Roadmap</summary>
+        <div>
+          <div class="section-title">Architecture & Tech Stack</div>
+          <ul>
+            <li>Backend: Python + FastAPI + LangChain for multi-agent orchestration</li>
+            <li>Frontend: Next.js decoupled API-driven UI</li>
+            <li>AI & Vectors: OpenAI API, RAG, FAISS, Pinecone for explainability and search</li>
+            <li>Compliance & Security: SOC2, ISO 27001, GDPR, LGPD, automated traceability with blockchain anchoring</li>
+            <li>CI/CD: GitHub Actions with Semgrep, SonarCloud, Snyk integration</li>
+          </ul>
+
+          <div class="section-title">Compliance & Security</div>
+          <ul>
+            <li>Automated compliance tagging in code and logs</li>
+            <li>Immutable audit trails versioned and timestamped</li>
+            <li>Role-based access control and secure API authentication</li>
+            <li>Continuous monitoring with alerting on compliance drift</li>
+          </ul>
+
+          <div class="section-title">Roadmap Highlights</div>
+          <div class="roadmap">
+            Expand multi-jurisdiction compliance agents; blockchain audit chains; explainability dashboards; integration with external audit systems.
+          </div>
+        </div>
+      </details>
+    </article>
+
+    <!-- Ezra Orchestrator -->
+    <article class="product-card" id="ezra-orchestrator">
+      <div class="product-header">
+        <h2>⚙️ Ezra Orchestrator</h2>
+        <div class="badges">
+          <img src="https://github.com/brachattech/EzraOrquestrator/actions/workflows/ci-auditoria.yml/badge.svg" alt="CI/CD" />
+          <img src="https://sonarcloud.io/api/project_badges/measure?project=ezra-orchestrator&metric=alert_status" alt="Quality Gate" />
+        </div>
+      </div>
+      <p class="product-description">
+        Central orchestrator for secure multi-agent, multi-platform automation.<br />
+        Coordinates compliance, audit, explainability layers for Brachat and Ezra products. CI/CD, RBAC, traceability by default.
+      </p>
+      <details>
+        <summary>Details: Architecture, Compliance & Roadmap</summary>
+        <div>
+          <div class="section-title">Architecture & Tech Stack</div>
+          <ul>
+            <li>Central compliance backbone integrating Brachat and Ezra ecosystems</li>
+            <li>Automated lifecycle management for agents, audit logs and tokens</li>
+            <li>Role-based access control with zero-trust security model</li>
+            <li>CI/CD orchestration via GitHub Actions, with strict policy enforcement</li>
+            <li>Immutable logs with cryptographic hashes and blockchain anchoring</li>
+          </ul>
+
+          <div class="section-title">Compliance & Security</div>
+          <ul>
+            <li>Enforces 47-point compliance and audit workflow</li>
+            <li>Ensures traceability, incident response and rollback across ecosystems</li>
+            <li>Public audit tables auto-updated per pipeline run</li>
+            <li>Governance of secrets, incident management and policy enforcement</li>
+          </ul>
+
+          <div class="section-title">Roadmap Highlights</div>
+          <div class="roadmap">
+            Develop AI-driven compliance monitoring dashboards; agent registry; explainable logs; API hooks for external auditors.
+          </div>
+        </div>
+      </details>
+    </article>
+
+    <footer>
+      © 2025 Fabio Everton & AA Everton. All rights reserved.<br />
+      Full documentation, audit reports, and compliance evidence available for due diligence.<br />
+      <a href="https://github.com/fabioeverton/everton-showcase" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+    </footer>
   </div>
+</body>
+</html>
+
 </body>
 </html>
